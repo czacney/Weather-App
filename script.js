@@ -1,6 +1,6 @@
-// //city function & info
-// $('city-input').click(function(event) {
-//   event.preventDefault();
+//city function & info
+$('run-search').click(function(event) {
+  event.preventDefault();
 
   var city = $("#city-input").val();
 

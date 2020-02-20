@@ -18,8 +18,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -29,18 +28,53 @@
     </nav>
 
 
-    <section id="container">
-        <h1>City Search</h1>
-        <form id="search-form">
-            <label for="city-input">Type your city here!</label>
-            <input type="text" id="city-input"><br>
-            <button id="select-city" type="submit" value="Search!">Search!</i>
-        </form>
-    </section>
+    <div class="container">
+        <div class="row">
+            <!-- users input which city they want -->
+            <form id="search-form">
+                <label for="city-input">Type your city here!</label>
+                <input type="text" id="city-input"><br>
+
+                <!-- This button will trigger our AJAX call -->
+                <button type="submit" class="btn btn-default" id="run-search">
+                    <i class="fa fa-search"></i> Search</button>
+                <!-- This row will handle all of the retrieved articles -->
+
+                        <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+                        <div class="card mt-5" id="recent-cites">
+                            <!-- card Heading for the retrieved articles box -->
+                            <div class="card-header">
+                                <strong>
+                                    <i class="fas fa-city"></i> Recent Cities </strong>
+                            </div>
+                            <ul class="list-group list-group-flush" id="recent-cities-list">
+                            </ul>
+                        </div>
+            </form>
+        </div>
+    </div>
+
+<section id="weather-display" class="col-lg-12">
     <div class="city"></div>
     <div class="wind"></div>
     <div class="humidity"></div>
     <div class="temp"></div>
+
+</section>
+
+    <footer>
+    <div class="row">
+        <div class="col-sm-12">
+            <hr>
+            <h5 class="text-center">
+                <small>Made by Casey Zacney
+                <i class="far fa-tree-alt"></i>
+                </small>
+            </h5>
+
+        </div>
+    </div>
+</footer>
 
 
 
@@ -71,45 +105,8 @@
             <li class="list-group-item">Dapibus ac facilisis in</li>
             <li class="list-group-item">Vestibulum at eros</li>
         </ul>
-    </div>
+    </div>-->
 
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    </div> -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 
 
